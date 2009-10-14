@@ -6,6 +6,7 @@ class CreateProjects < ActiveRecord::Migration
       t.text :body
       t.string :icon_url
       t.string :source_url
+      t.boolean :is_featured
       t.string :permalink
 
       t.timestamps
