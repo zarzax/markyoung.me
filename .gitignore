@@ -1,0 +1,17 @@
+*~
+*.cache
+*.log
+*.pid
+tmp/**/*
+.DS\_Store
+db/cstore/**
+db/development.sqlite3
+db/*.sqlite3
+doc/api
+doc/app
+doc/plugins
+coverage/*
+db/*.sqlite3
+*.tmproj
+Capfile
+public/stylesheets/compiled/*
