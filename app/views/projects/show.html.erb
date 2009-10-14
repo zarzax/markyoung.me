@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%=h @project.title %>
+</p>
+
+<p>
+  <b>Teaser:</b>
+  <%=h @project.teaser %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @project.body %>
+</p>
+
+<p>
+  <b>Icon url:</b>
+  <%=h @project.icon_url %>
+</p>
+
+<p>
+  <b>Source url:</b>
+  <%=h @project.source_url %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%=h @project.permalink %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
