@@ -23,3 +23,12 @@ Migrating to CreateProjects (20091014181829)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-10-14 19:23:34) [GET]
+  [4;36;1mProject Load (0.9ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 57ms (View: 51, DB: 1) | 200 OK [http://localhost/projects]
