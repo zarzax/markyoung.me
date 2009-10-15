@@ -1,0 +1,14 @@
+/ taken from http://blog.jerodsanto.net/2009/07/sass-never-forgets/
+/ usage
+/ #centered
+/		+dead-center(200px,500px)
+
+=dead-center(!height,!width)
+  :height= !height
+  :margin-top= -(!height / 2)
+  :top 50%
+  :width= !width
+  :margin-left= -(!width / 2)
+  :left 50%
+  :position absolute
+  :text-align center

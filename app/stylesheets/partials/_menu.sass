@@ -1,0 +1,31 @@
+=customnav()
+	:display block
+	+prepend(5)
+	ol
+		+horizontal-list
+		li
+			+column(3)
+			+colborder
+			:height 53px
+			a
+				:text-decoration none
+				:letter-spacing 0.05em
+				:font-weight bold
+				:line-height 48px
+				:color #fff
+			small
+				display: block
+				line-height: 0
+				margin-top: -7px
+				color: #666666
+				font-size: 0.85em
+				font-weight: normal
+				letter-spacing: 0
+				font-size: 0.85em
+				font-weight: normal
+				letter-spacing: 0
+				&active
+					color: #CCCCCC
+		li.first
+			border-left: 1px solid #EEEEEE
+			padding-left: 24px
