@@ -7,6 +7,8 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem 'chriseppstein-compass', :lib => 'compass', :source => 'http://gems.github.com/'
+  config.gem 'haml', :lib => 'haml', :version => '>=2.2.0'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -20,6 +22,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   
+  config.gem "Haml", :lib => "haml"
   config.gem "RedCloth", :lib => "RedCloth"
   config.gem "chriseppstein-compass", :lib => 'compass'
   config.gem "mbleigh-acts-as-taggable-on", :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
