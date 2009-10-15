@@ -22,9 +22,9 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   
-  config.gem "Haml", :lib => "haml"
+  # config.gem "Haml", :lib => "haml"
   config.gem "RedCloth", :lib => "RedCloth"
-  config.gem "chriseppstein-compass", :lib => 'compass'
+  # config.gem "chriseppstein-compass", :lib => 'compass'
   config.gem "mbleigh-acts-as-taggable-on", :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
   
 
