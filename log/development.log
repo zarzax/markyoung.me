@@ -32,3 +32,4 @@ Processing ProjectsController#index (for 127.0.0.1 at 2009-10-14 19:23:34) [GET]
 Rendering template within layouts/projects
 Rendering projects/index
 Completed in 57ms (View: 51, DB: 1) | 200 OK [http://localhost/projects]
+** acts_as_taggable_on: initialized properly.
