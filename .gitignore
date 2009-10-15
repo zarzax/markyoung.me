@@ -2,6 +2,7 @@
 *.cache
 *.log
 *.pid
+log/*
 tmp/**/*
 .DS\_Store
 db/cstore/**
