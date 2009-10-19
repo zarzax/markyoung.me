@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   
   # config.gem "Haml", :lib => "haml"
   config.gem "RedCloth", :lib => "RedCloth"
+  config.gem "validatable", :lib => "validatable"
   # config.gem "chriseppstein-compass", :lib => 'compass'
   config.gem "mbleigh-acts-as-taggable-on", :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
   
