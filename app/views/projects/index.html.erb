@@ -1,30 +1,13 @@
-<h1>Listing projects</h1>
+<%= render :partial => 'project_nav' %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Teaser</th>
-    <th>Body</th>
-    <th>Icon url</th>
-    <th>Source url</th>
-    <th>Permalink</th>
-  </tr>
+<h2>Listing projects</h2>
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%=h project.title %></td>
-    <td><%=h project.teaser %></td>
-    <td><%=h project.body %></td>
-    <td><%=h project.icon_url %></td>
-    <td><%=h project.source_url %></td>
-    <td><%=h project.permalink %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+
+<%= render :partial => 'project', :collection => @projects %>
+
 
 <br />
 
-<%= link_to 'New project', new_project_path %>
+<% if @admin -%>
+	<%= link_to 'New project', new_project_path %>
+<% end -%>

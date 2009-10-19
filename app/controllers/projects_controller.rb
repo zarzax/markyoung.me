@@ -1,9 +1,40 @@
 class ProjectsController < ApplicationController
+
+  # GET /projects/featured
+  # GET /projects/featured.xml
+  def featured
+    @projects = Project.find_featured_projects
+    load_tag_vars
+    
+    respond_to do |format|
+      format.html # featured.html.erb
+      format.xml  { render :xml => @projects }
+    end
+  end
+
+  # GET /projects/tagged/tag
+  # GET /projects/tagged/tag.xml
+  def tagged
+    @projects = Project.find_tagged_with(params[:id])
+    load_tag_vars
+
+    respond_to do |format|
+      format.html # tagged.html.erb
+      format.xml  { render :xml => @projects }
+    end
+  end
+  
+  
+  ###
+  # Restful Resources
+  ###
+
   # GET /projects
   # GET /projects.xml
   def index
-    @projects = Project.all
-
+    @projects = Project.find_projects
+    load_tag_vars
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @projects }
@@ -82,4 +113,13 @@ class ProjectsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+
+private
+  def load_tag_vars
+    @languages = Project.language_counts
+    @tags = Project.tag_counts
+    @all_tags = @languages + @tags
+    @levels = ["xxs", "xs", "s", "l", "xl", "xxl"]
+  end  
 end

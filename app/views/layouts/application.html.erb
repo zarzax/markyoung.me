@@ -16,11 +16,11 @@
 </head>
 <body>
 
-<div id="container" class="showgrid">
+<div id="container">
 
-<%= render :partial => 'header'%>
+<%= render :partial => 'layouts/header'%>
 
-<%= render :partial => 'flashnotice'%>
+<%= render :partial => 'layouts/flashnotice'%>
 
 <div id="content">
 	<%= yield %>
@@ -28,7 +28,7 @@
 
 
 
-<%= render :partial => 'footer'%>
+<%= render :partial => 'layouts/footer'%>
 
 </div>
 

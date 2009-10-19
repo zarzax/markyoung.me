@@ -57,7 +57,8 @@ namespace :db do
       :tag_list => "Wordpress, Mediawiki, Graphic Design, CMS",
       :language_list => "PHP, jQuery, CSS, XHTML",
       :icon_url => "/images/default.jpg",
-      :source_url => "http://community.nagios.org"
+      :source_url => "http://community.nagios.org",
+      :is_featured => true
     )
     
     Project.create(
