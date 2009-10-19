@@ -1,0 +1,13 @@
+<div class="project">
+<h3><%=h project.title %></h3>
+<p><%=h project.teaser %></p>
+<%= image_tag project.icon_url %>
+
+		<% if @admin -%>
+		<ul>
+	    <li><%= link_to 'Show', project %></li>
+	    <li><%= link_to 'Edit', edit_project_path(project) %></li>
+	    <li><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></li>
+		</ul>
+		<% end -%>
+</div>

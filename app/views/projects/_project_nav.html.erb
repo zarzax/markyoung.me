@@ -1,0 +1,26 @@
+<div id="project-nav">
+	<h2>Project Navigation</h2>
+	<div id="project-tags">
+		<% if @tags.empty? -%>
+			<p>No tags defined!</p>
+		<% else -%>
+			<h3>Tags:</h3>
+			<% @tags.each do |tag| -%>
+				<%= link_to tag, :action => 'tagged', :id => tag.name%>
+			<% end -%>
+		<% end -%>
+	</div>
+	<div id="project-languages">
+		<% if @languages.empty? -%>
+			<p>No tags defined!</p>
+		<% else -%>
+			<h3>Programming Languages:</h3>
+			<% @languages.each do |tag| -%>
+				<%= link_to tag, :action => 'tagged', :id => tag.name%>
+			<% end -%>
+		<% end -%>
+	</div>
+	<div id="project-search">
+		<p>Search coming soon!</p>
+	</div>
+</div>
