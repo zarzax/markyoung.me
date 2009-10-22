@@ -15,7 +15,7 @@ class Project < ActiveRecord::Base
   end
   
   def self.find_featured_projects
-    find_all_by_is_featured
+    find_all_by_is_featured(true, :order => 'title')
   end
   
   def self.find_all_tags

@@ -1,15 +1,10 @@
+
 <%= render :partial => 'project_nav' %>
 
 <h2>Listing projects</h2>
 
-
 <%= render :partial => 'project', :collection => @projects %>
-
-
-<br />
 
 <% if @admin -%>
 	<%= link_to 'New project', new_project_path %>
 <% end -%>
-
-<%= link_to 'New project', new_project_path %>

@@ -7,7 +7,14 @@ ActionController::Routing::Routes.draw do |map|
                                     :action => 'featured'
                                     
   map.resources :projects, :contacts
-
+  
+  map.root :controller => 'static', :action => 'home'
+  
+  map.with_options :controller => 'static' do |static|
+    static.about 'about', :action => 'about'
+    static.home 'home', :action => 'home'
+  end
+    
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
