@@ -5,6 +5,16 @@
 @import compass/utilities.sass
 @import partials/base.sass
 @import partials/rounded.sass
+@import partials/squeezerounded.sass
+
+// Import separate page css
+@import partials/sidebar.sass
+@import partials/home.sass
+@import partials/about.sass
+@import partials/contacts.sass
+@import partials/projects.sass
+@import partials/footer.sass
+
 
 // Import separate modules.
 +blueprint-typography
@@ -20,5 +30,52 @@
 !header_background_color = #333
 
 // Start SASSing
+body
+	:background #00549B url(/images/BkgBody.jpg) repeat-x scroll left top
+
+#background-container
+	+container
+	:width 964
+	:padding 8px
+	:background-color #FFF
+	:margin-top 18px
+	:margin-bottom 18px
+	+squeezerounded(20px)
+	
 #container
 	+container
+	
+#maincontent
+	+column(19)
+	
+#header
+	+column(24,true)
+	:background #333333
+	+squeezerounded(20px)
+	:color #E6F3FF
+	:margin-bottom 18px
+	#title
+		+column(8,true)
+		h1
+			:line-height 2
+			:color #E6F3FF
+			:margin-left 40px
+			:font-size 4em
+	#navigation
+		+column(16,true)
+		h3
+			:visibility hidden
+		ul
+			+inline-list
+			:margin-left 40px
+		a
+			:font-size 2.5em
+			:color #E6F3FF
+			:padding 0 5px 0 5px
+
+// No more indent
+p + p
+	:margin 0 0 1.5em
+	:text-indent 0em
+	
+

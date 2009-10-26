@@ -1,6 +1,6 @@
-<div id="project-nav">
+<div class="project-nav sidebar-content">
 	<h3>Project Navigation</h3>
-	<div id="project-tags">
+	<div class="project-tags">
 		<% if @tags.empty? -%>
 			<p>No tags defined!</p>
 		<% else -%>
@@ -10,7 +10,7 @@
 			<% end -%>
 		<% end -%>
 	</div>
-	<div id="project-languages">
+	<div class="project-languages">
 		<% if @languages.empty? -%>
 			<p>No tags defined!</p>
 		<% else -%>
@@ -19,9 +19,5 @@
 				<%= link_to tag, :action => 'tagged', :id => tag.name%>
 			<% end -%>
 		<% end -%>
-	</div>
-	<div id="project-search">
-		<h4>Search:</h4>
-		<p>Search coming soon!</p>
 	</div>
 </div>

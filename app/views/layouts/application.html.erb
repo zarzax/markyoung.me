@@ -11,26 +11,19 @@
 	  <%= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection' %>
 	<![endif]-->
 	
-	<%= stylesheet_link_tag 'scaffold' %>
+	<!-- <%= stylesheet_link_tag 'scaffold' %> -->
 	
 </head>
 <body>
-
-<div id="container">
-
-<%= render :partial => 'layouts/header'%>
-
-<%= render :partial => 'layouts/flashnotice'%>
-
-<div id="content">
-	<%= yield %>
-</div>
-
-
-
-<%= render :partial => 'layouts/footer'%>
-
-</div>
-
+	<div id="background-container">
+		<div id="container">
+			<%= render :partial => 'layouts/header'%>
+			<%= render :partial => 'layouts/flashnotice'%>
+		<div id="content">
+			<%= yield %>
+		</div>
+			<%= render :partial => 'layouts/footer'%>
+		</div>
+	</div>
 </body>
 </html>

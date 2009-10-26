@@ -5,6 +5,7 @@ class StaticController < ApplicationController
   end
   
   def about
+    @projects = Project.find_featured_projects
   end
   
 end

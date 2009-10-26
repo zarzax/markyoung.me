@@ -1,0 +1,51 @@
+
+.project	
+	+clearfix
+	:margin-bottom 18px
+	:padding-left 20px
+	:padding-right 20px
+	.titlebar
+		.title
+			a
+				:font-size 1.7em
+				:text-decoration none
+				:color #CC6600
+		h4
+			:float left
+			:margin-bottom 0em
+			:font-size 1.3em
+			:font-weight bold
+		.project-tags
+			h4
+				:display none
+			ul
+				+inline-list
+				li
+					:margin-left 2px
+					+squeezerounded(5px)
+					:background #ECE2C5
+					:border 1px #ECE333 solid
+					a
+						:text-decoration none
+						:padding 6px
+						:font-size 1.3em
+	.project-content
+		:border-top 1px solid #E2E2E2
+	.project-text
+		+column(11)
+		p
+			:margin-top 1em
+
+	.project-icon
+		:float right
+		:height 190px
+		:width 250px
+		:margin-top 1em
+		:background-color #333333
+		+squeezerounded(10px)
+		img
+			:height 180px
+			:width 240px
+			:background-color #FEFAF0
+			+squeezerounded(10px)
+			:margin 5px

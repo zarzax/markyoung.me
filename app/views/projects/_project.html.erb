@@ -1,33 +1,41 @@
 <div class="project">
-	<h3><%=link_to h(project.title), project_path(project) %></h3>
-	<p><%=h project.teaser %></p>
-
-	<div class="project-tags">
-		<h4>General Tags:</h4>
-		<ul class="project-tags-list">
-			<% project.tag_list.each do |tag| -%>
-				<li> <%= link_to tag, :action => 'tagged', :id => tag %> </li>
-			<% end -%>
-		</ul>
+	<div class="titlebar">
+		<h3 class="title"><%=link_to h(project.title), project_path(project) %></h3>
+		<h4>Tags: </h4>
+		<div class="project-tags">
+			<h4>General Tags:</h4>
+			<ul class="project-tags-list">
+				<% project.tag_list.each do |tag| -%>
+					<li> <%= link_to tag, :action => 'tagged', :id => tag %> </li>
+				<% end -%>
+			</ul>
+	
+			<h4>Programming Languages:</h4>
+			<ul class="project-languages-list">
+				<% project.language_list.each do |tag| -%>
+					<li> <%= link_to tag, :action => 'tagged', :id => tag %> </li>
+				<% end -%>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="project-content">	
+		<div class="project-text">	
+			<p class="teaser"><%=h project.teaser %></p>
 		
-		<h4>Programming Languages:</h4>
-		<ul class="project-languages-list">
-			<% project.language_list.each do |tag| -%>
-				<li> <%= link_to tag, :action => 'tagged', :id => tag %> </li>
+			<% if @admin -%>
+				<ul class="project-admin-list">
+				   <li><%= link_to 'Show', project %></li>
+				   <li><%= link_to 'Edit', edit_project_path(project) %></li>
+				   <li><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></li>
+				</ul>
 			<% end -%>
-		</ul>
+		</div>
+	
+		<div class="project-icon">
+			<%= image_tag project.icon_url %>
+		</div>
 	</div>
 
-	<div class="project-icon">
-		<%= image_tag project.icon_url %>
-	</div>
 
-
-	<% if @admin -%>
-		<ul class="project-admin-list">
-		   <li><%= link_to 'Show', project %></li>
-		   <li><%= link_to 'Edit', edit_project_path(project) %></li>
-		   <li><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></li>
-		</ul>
-	<% end -%>
 </div>

@@ -1,25 +1,46 @@
-<h2>Contact Me</h2>
+<div id="maincontent" class="contactme">
+	<h1>>> Say Hello</h1>
 
-<% form_tag :controller => 'contacts', :action => 'create' do -%>
-  <%= error_messages_for :contact %>
+	<div id="leftcolumn">
+		<h3>Email</h3>
+		<p>mark@zarzax.com</p>
+	
+		<h3>Call</h3>
+		<p>(651) 560-0108 (Google Voice)</p>
+	
+		<h3>Find Me Online</h3>
+		<ul>
+			<li>Blog: zarzax the blog</li>
+			<li>Twitter: @zarzax</li>
+			<li>Skype: zarzax</li>
+			<li>LinkedIn</li>
+			<li>Facebook</li>
+		</ul>
+	</div>
 
-  <p>
-    <%= label :contact, :name %><br />
-    <%= text_field :contact, :name %>
-  </p>
-  <p>
-    <%= label :contact, :email %><br />
-    <%= text_field :contact, :email %>
-  </p>
-  <p>
-    <%= label :contact, :subject %><br />
-    <%= text_field :contact, :subject %>
-  </p>
-  <p>
-    <%= label :contact, :message %><br />
-    <%= text_area :contact, :message %>
-  </p>
-  <p>
-    <%= submit_tag 'Create' %>
-  </p>
-<% end -%>
+	<div id="rightcolumn">
+		<% form_tag :controller => 'contacts', :action => 'create' do -%>
+		  <%= error_messages_for :contact %>
+
+		  <p>
+		    <%= label :contact, :name %><br />
+		    <%= text_field :contact, :name %>
+		  </p>
+		  <p>
+		    <%= label :contact, :email %><br />
+		    <%= text_field :contact, :email %>
+		  </p>
+		  <p>
+		    <%= label :contact, :subject %><br />
+		    <%= text_field :contact, :subject %>
+		  </p>
+		  <p>
+		    <%= label :contact, :message %><br />
+		    <%= text_area :contact, :message %>
+		  </p>
+		  <p>
+		    <%= submit_tag 'Send' %>
+		  </p>
+		<% end -%>
+	</div>
+</div>

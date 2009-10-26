@@ -1,10 +1,14 @@
 
-<%= render :partial => 'project_nav' %>
 
-<h2>Listing projects</h2>
+<div id="maincontent" class="projects">
+	<h1>>> Delicious and Tasty Projects</h1>
 
 <%= render :partial => 'project', :collection => @projects %>
 
 <% if @admin -%>
 	<%= link_to 'New project', new_project_path %>
 <% end -%>
+
+</div>
+
+<%= render :partial => 'sidebar' %>
