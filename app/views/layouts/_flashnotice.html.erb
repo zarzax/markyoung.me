@@ -1,1 +1,25 @@
-<p style="color: green"><%= flash[:notice] %></p>
+<!-- <div id="flash_messages">
+	<% if flash[:notice] %>
+		<div class="green flash"><b>Success:</b> <%= flash[:notice] %></div><br/>
+	<% end -%>
+	<% if flash[:warning] %>
+		<div class="red flash"><b>Warning:</b> <%= flash[:warning] %></div><br/>
+	<% end -%>
+	<% if flash[:error] %>
+		<div class="red flash"><b>Error:</b> <%= flash[:error] %></div><br/>
+	<% end -%>	
+</div>
+
+<% flash.each do |key, msg| %>
+  <%= content_tag :div, msg, :class => "flash", :id => key %>
+  <% content_tag :script, :type => "text/javascript" do %>
+    $('<%= key %>').style.display = 'none';
+    new Effect.Appear('<%= key %>', {duration: 3});
+  <% end %>
+
+  <% content_tag :script, :type => "text/javascript" do %>
+    setTimeout("new Effect.Fade('<%= key %>');", 10000);
+  <% end %>
+<% end %> -->
+
+<%= display_flash %>

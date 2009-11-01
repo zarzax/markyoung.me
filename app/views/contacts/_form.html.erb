@@ -1,0 +1,23 @@
+<% form_tag :controller => 'contacts', :action => 'create' do -%>
+  <%= error_messages_for :contact %>
+
+  <p>
+    <%= label :contact, :name %><br />
+    <%= text_field :contact, :name %>
+  </p>
+  <p>
+    <%= label :contact, :email %><br />
+    <%= text_field :contact, :email %>
+  </p>
+  <p>
+    <%= label :contact, :subject %><br />
+    <%= text_field :contact, :subject %>
+  </p>
+  <p>
+    <%= label :contact, :message %><br />
+    <%= text_area :contact, :message %>
+  </p>
+  <p>
+    <%= submit_tag 'Send' %>
+  </p>
+<% end -%>

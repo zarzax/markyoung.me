@@ -27,6 +27,7 @@ Rails::Initializer.run do |config|
   config.gem "validatable", :lib => "validatable"
   # config.gem "chriseppstein-compass", :lib => 'compass'
   config.gem "mbleigh-acts-as-taggable-on", :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
+  config.gem 'formtastic', :source => 'http://gemcutter.org'
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
