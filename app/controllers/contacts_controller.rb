@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
     # using the Validatable gem. Else flash error
     # array.  Redirect to contact index.
     if @contact.valid?
-      NotificationMailer.deliver_contact(@contact2)
+      NotificationMailer.deliver_contact(@contact)
       flash[:notice] = "Your message has been sent!"
       redirect_to :controller => 'contacts', :action => 'index'
     else
