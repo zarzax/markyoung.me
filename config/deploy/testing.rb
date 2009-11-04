@@ -38,6 +38,11 @@ deploy.task :start do
   # nothing
 end
 
+# No standard restart method
+deploy.task :restart do
+  # nothing
+end
+
 
 # Custom Database.yml
 
