@@ -2,7 +2,7 @@
 module ApplicationHelper
   
   
-  FLASH_TYPES = [:error, :warning, :success, :message]
+  FLASH_TYPES = [:notice, :error, :warning, :success, :message]
   
   def display_flash(type = nil)
     html = ""
@@ -10,7 +10,7 @@ module ApplicationHelper
     if type.nil?
       FLASH_TYPES.each { |name| html << display_flash(name) }
     else
-      return flash[type].blank? ? "" : "<div class=\"#{type}\"><p>#{flash[type]}</p></div>"
+      return flash[type].blank? ? "" : "<div class=\"flash #{type}\"><p>#{flash[type]}</p></div>"
     end
     
     html

@@ -1,46 +1,28 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'contact_validation' %>
+<% end %>
+
 <div id="maincontent" class="contactme">
 	<h1>>> Say Hello</h1>
 
-	<div id="leftcolumn">
-		<% form_tag :controller => 'contacts', :action => 'create' do -%>
-		  <%= error_messages_for :contact %>
-
-		  <p>
-		    <%= label :contact, :name %><br />
-		    <%= text_field :contact, :name %>
-		  </p>
-		  <p>
-		    <%= label :contact, :email %><br />
-		    <%= text_field :contact, :email %>
-		  </p>
-		  <p>
-		    <%= label :contact, :subject %><br />
-		    <%= text_field :contact, :subject %>
-		  </p>
-		  <p>
-		    <%= label :contact, :message %><br />
-		    <%= text_area :contact, :message %>
-		  </p>
-		  <p>
-		    <%= submit_tag 'Send' %>
-		  </p>
-		<% end -%>
+	<div id="contactform">
+		<%= render :partial => 'form'%>
 	</div>
+</div>
 
-	<div id="rightcolumn">
-		<h3>Email</h3>
-		<p>mark@zarzax.com</p>
-	
-		<h3>Call</h3>
-		<p>(651) 560-0108 (Google Voice)</p>
-	
-		<h3>Find Me Online</h3>
-		<ul>
-			<li>Blog: zarzax the blog</li>
-			<li>Twitter: @zarzax</li>
-			<li>Skype: zarzax</li>
-			<li>LinkedIn</li>
-			<li>Facebook</li>
-		</ul>
-	</div>
+<div id="sidebar">
+	<h3>Email</h3>
+	<p>mark@zarzax.com</p>
+
+	<h3>Call</h3>
+	<p>(651) 560-0108 (Google Voice)</p>
+
+	<h3>Find Me Online</h3>
+	<ul>
+		<li>Blog: zarzax the blog</li>
+		<li>Twitter: @zarzax</li>
+		<li>Skype: zarzax</li>
+		<li>LinkedIn</li>
+		<li>Facebook</li>
+	</ul>
 </div>
